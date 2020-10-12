@@ -1,10 +1,13 @@
 {
-  "name": "extract-html-meta",
+  "name": "html-extract-meta",
   "version": "1.0.0",
-  "description": "",
+  "description": "the inverse of html-inject-meta",
   "main": "index.js",
+  "bin": {
+    "html-extract-meta": "bin.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js"
   },
   "repository": {
     "type": "git",
@@ -12,9 +15,19 @@
   },
   "keywords": [],
   "author": "Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/regular/extract-html-meta/issues"
   },
-  "homepage": "https://github.com/regular/extract-html-meta#readme"
+  "homepage": "https://github.com/regular/extract-html-meta#readme",
+  "dependencies": {
+    "bl": "^4.0.3",
+    "debug": "^4.2.0",
+    "loner": "^1.0.0",
+    "minimist": "^1.2.5",
+    "xmldom": "^0.3.0"
+  },
+  "devDependencies": {
+    "tape": "^5.0.1"
+  }
 }

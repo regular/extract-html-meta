@@ -1,0 +1,21 @@
+<head>
+<title>time-spiral</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta charset="utf-8">
+<meta name="application-name" content="time-spiral">
+<meta name="subject" content="time-tracking (a Bay-of-Plenty demo)">
+<meta name="abstract" content="time-tracking (a Bay-of-Plenty demo)">
+<meta name="twitter:title" content="time-spiral">
+<meta name="description" content="time-tracking (a Bay-of-Plenty demo)">
+<meta name="twitter:description" content="time-tracking (a Bay-of-Plenty demo)">
+<meta name="author" content="Jan Bölsche &lt;jan@lagomorph.de&gt; (https://regular.codes/)">
+<meta name="twitter:creator" content="Jan Bölsche &lt;jan@lagomorph.de&gt; (https://regular.codes/)">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="time-spiral">
+<meta property="og:description" content="time-tracking (a Bay-of-Plenty demo)">
+<meta property="article:author" content="Jan Bölsche &lt;jan@lagomorph.de&gt; (https://regular.codes/)">
+<meta name="referrer" content="same-origin">
+<meta name="generator" content="tre-compile 1.3.1">
+<meta name="keywords" content="tre,bay-of-plenty,ssb,time tracking">
+<meta http-equiv="Content-Security-Policy" content="script-src 'sha256-Nn/H6T+T7/6qVeydXJiRn9nIngPKtDcKkAZhUPBfh4c=';">
+</head>
