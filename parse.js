@@ -10,7 +10,10 @@ const META_NAMES = {
   'twitter:description': 'description',
   'author': 'author',
   'twitter:creator': 'author',
-  'generator': 'generator'
+  'generator': 'generator',
+  'repository-url': 'repositoryUrl',
+  'repository-branch': 'repositoryBranch',
+  'commit': 'commit'
 }
 
 const META_PROPERTIES = {
