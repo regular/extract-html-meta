@@ -34,11 +34,32 @@ test('parse example HEAD element', t=>{
     name: 'time-spiral',
     description: 'time-tracking (a Bay-of-Plenty demo)',
     author: 'Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)',
-    generator: 'tre-compile 1.3.1',
+    generator: 'tre-compile 2.0.0',
     keywords: [ 'tre', 'bay-of-plenty', 'ssb', 'time tracking' ],
     http: {
-      'Content-Security-Policy': 'script-src \'sha256-Nn/H6T+T7/6qVeydXJiRn9nIngPKtDcKkAZhUPBfh4c=\';'
-    } 
+      'Content-Security-Policy': 'script-src \'sha256-sPN3vBnTIdrZisYveolmfZSV36fKURy7y9Om47lYkgM=\';'
+    },
+    namespaced: {
+      twitter: {
+        title: 'time-spiral',
+        description: 'time-tracking (a Bay-of-Plenty demo)',
+        creator: 'Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)',
+        card: 'summary'
+      },
+      og: {
+        title: 'time-spiral',
+        description: 'time-tracking (a Bay-of-Plenty demo)'
+      },
+      article: {
+        author: 'Jan Bölsche <jan@lagomorph.de> (https://regular.codes/)'
+      },
+      tre: {
+        'repository-url': 'git@github.com:regular/time-spiral.git',
+        'repository-branch': 'master',
+        commit: 'b4d2e48-dirty',
+        main: 'index.js'
+      }
+    }
   })
 
   t.end()

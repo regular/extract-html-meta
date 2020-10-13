@@ -25,6 +25,7 @@
     "debug": "^4.2.0",
     "loner": "^1.0.0",
     "minimist": "^1.2.5",
+    "traverse": "^0.6.6",
     "xmldom": "^0.3.0"
   },
   "devDependencies": {

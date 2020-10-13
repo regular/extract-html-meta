@@ -1,25 +1,30 @@
 const x = require('xmldom')
 const debug = require('debug')('html-extract-meta:parse')
+const traverse = require('traverse')
 
 const META_NAMES = {
   'application-name': 'name',
   'subject': 'description',
   'abstract': 'description',
-  'twitter:title': 'name',
+  //'twitter:title': 'name',
   'description': 'description',
-  'twitter:description': 'description',
+  //'twitter:description': 'description',
   'author': 'author',
-  'twitter:creator': 'author',
+  //'twitter:creator': 'author',
   'generator': 'generator',
+  /*
   'repository-url': 'repositoryUrl',
   'repository-branch': 'repositoryBranch',
   'commit': 'commit'
+  */
 }
 
 const META_PROPERTIES = {
+  /*
   'og:title': 'name', 
   'og:description': 'description',
   'article:author': 'author'
+  */
 }
 
 module.exports = function(html) {
@@ -50,6 +55,8 @@ module.exports = function(html) {
 function extract(tags) {
   const http = {}
   const entries = []
+  const namespaced = {}
+  const ns = traverse(namespaced)
   for(let tag of tags) {
     const {tagName, attrs, text} = tag
     if (tagName == 'title') entries.push(['name', text])
@@ -72,11 +79,18 @@ function extract(tags) {
       if (value && key) {
         entries.push([key, value])
       } else {
-        debug('ignoring meta tag: name="%s", property="%s", content="%s"', name, property, content)
+        key = (name || property)
+        if (key && key.indexOf(':') !== -1) {
+          const path = key.split(':')
+          ns.set(path, value)
+        } else {
+          debug('ignoring meta tag: name="%s", property="%s", content="%s"', name, property, content)
+        }
       }
     }
   }
   if (Object.keys(http).length) entries.push(['http', http])
+  if (Object.keys(namespaced).length) entries.push(['namespaced', namespaced])
   return Object.fromEntries(entries)
 }
 

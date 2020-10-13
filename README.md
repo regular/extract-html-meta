@@ -25,6 +25,8 @@ function onMeta(err, meta) {
   - generator (coming from `<meta name="generator">`
   - http (an object with http headers coming from `<meta http-equiv>` tags
 
+If there are meta tags with name or property attributes containing a colon (:), they are considered "namespaced meta tags" and occur in meta.namespaced. For example, `<meta name="twitter:creator" conent="regular"/>` shows up as `meta.namespaced.twitter.ceator`
+
 ## CLI
 
 `html-extract-meta < in.html > out.json [--through]`
